@@ -10,7 +10,7 @@ with request.urlopen(src) as response:
 
 clist=data["result"]["results"]
 
-with open("data.csv",mode="w",newline="",encoding="utf-8") as file:
+with open("attraction.csv",mode="w",newline="",encoding="utf-8") as file:
     writer=csv.writer(file)
 
     districts = ["中正區", "萬華區", "中山區", "大同區", "大安區", "松山區","信義區", "士林區", "文山區", "北投區", "內湖區", "南港區"]
@@ -44,7 +44,7 @@ for sightspot in clist:
         else:
             data[MRT] = stitle
 
-with open("data.csv", mode="a", newline="", encoding="utf-8") as file:
+with open("mrt.csv", mode="w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
 
     writer.writerow([])
