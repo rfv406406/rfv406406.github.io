@@ -47,8 +47,6 @@ for sightspot in clist:
 with open("mrt.csv", mode="w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
 
-    writer.writerow([])
-
     for MRT, stitles in data.items():
         writer.writerow([MRT, stitles])
 
