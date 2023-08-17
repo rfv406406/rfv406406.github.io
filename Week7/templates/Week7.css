@@ -1,0 +1,76 @@
+body{
+    margin:0;
+  }
+
+.welcome {
+    font-size:40px;
+    height:150px;
+    background-color:aqua;
+    justify-content:center;
+    align-items:center;
+    display: flex;
+}
+
+.form {
+    font-size:24px;
+    text-align:center;
+    margin-top: 10px;
+}
+
+.form2 {
+  font-size:24px;
+  text-align:center;
+}
+
+.signin {
+    font-size:24px;
+    justify-content:center;
+    align-items:center;
+    display: flex;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    width: 200px; /* 設置輸入框寬度為 300 像素 */
+    height: 24px; /* 設置輸入框高度為 40 像素 */
+    font-size: 24px; /* 調整文字大小 */
+    border: 1px solid #ccc; /* 設置邊框樣式 */
+    padding: 8px; /* 設置內間距 */
+    border-radius: 5px; /* 設置圓角 */
+    margin-top: 10px;
+  }
+
+input[type="password"] {
+    width: 200px; /* 設置輸入框寬度為 300 像素 */
+    height: 24px; /* 設置輸入框高度為 40 像素 */
+    font-size: 24px; /* 調整文字大小 */
+    border: 1px solid #ccc; /* 設置邊框樣式 */
+    padding: 8px; /* 設置內間距 */
+    border-radius: 5px; /* 設置圓角 */
+    margin-top: 10px;
+  }
+
+input[type="checkbox"] {
+    width: 24px;
+    height: 24px; 
+    border-radius: 5px; 
+    margin-top: 10px;
+  }
+
+button {
+    width: 80px; 
+    height: 40px; 
+    font-size: 24px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin-top: 10px;
+  }
+  
+.button2 {
+    width: 20px; 
+    height: 20px; 
+    font-size: 15px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin-top: 10px;
+  }
