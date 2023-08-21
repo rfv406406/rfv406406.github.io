@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="view point" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+        <meta charest="utf-8"/>
+        <title>網頁切版</title>
+        <link rel="stylesheet" type="text/css" href="Week1-2 切版.CSS" />
+    </head>
+    <body>
+        <div class="frame">
+            <div class="left">My Website</div>
+            <div class="right">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+            </div>
+            <div class="right2">
+                <img src="menu.png" width="30" height="30" />
+            </div>
+        </div>
+
+        <div class="frame2">
+            <div class="welcome">Welcome to MyHome</div>
+        </div>
+
+        <div class="frame3">
+            <div class="frame3-1">
+                <div class="fig"></div>
+                <div class="text"></div>
+            </div>
+            <div class="frame3-1">
+                <div class="fig"></div>
+                <div class="text"></div>
+            </div>
+            <div class="frame3-1">
+                <div class="fig"></div>
+                <div class="text"></div>
+            </div>
+        </div>
+
+        <script>
+            function getData(){
+                //利用 FETCH 進行連線取得資料
+                fetch("https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json")
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(data){
+                    let frame3 = document.querySelectorAll(".frame3-1");
+                    //已經取得的資料，把資料呈現於畫面
+                    // for(let i = 0; i < data.result.results.length; i++){
+                    //     let stitle = data.result.results[i].stitle;
+
+                    //     let container = frame3[i];// 在每个frame3-1容器中创建图片元素和标题文本
+                    //     //let textcontainer = container.querySelector(".text");
+        
+                    //     // 建立一個新的 div 元素
+                    //     let newdiv = document.createElement('div');
+        
+                    //     // 將 stitle 的值放入該元素
+                    //     newdiv.textContent = stitle;
+        
+                    //     // 將 newDiv 附加到 container 容器中
+                    //     container.appendChild(newdiv);
+                    // }
+
+                    for(let i = 0; i < data.result.results.length; i++){
+                        let file = data.result.results[i].file;
+                        let container = frame3[i];
+                        let figcontainer = container.querySelector(".fig");
+                        let urlSegments = file.split('https').filter(url => url.trim() !== '');
+                        let finalUrls = urlSegments.map(function(segment) {return "https" + segment});
+                        let newDiv = document.createElement('div');
+                        let image = document.createElement("img");
+                        image.src = finalUrls[0];
+                        newDiv.appendChild(image);
+                        figcontainer.appendChild(newDiv);
+                            }
+                        })
+                
+            }
+
+            getData();
+        </script>
+        
+    </body>
+</html>      
+
+
+

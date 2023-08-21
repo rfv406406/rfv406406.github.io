@@ -1,0 +1,75 @@
+body{
+  margin:0;
+}
+.banner{
+  background-image:url("https://rfv406406.github.io/banner.jpg");
+  position:fixed;
+  background-size:cover;
+  background-position:center;
+  width:100%;
+  height:100%;
+  z-index:-1; 
+}
+.headline{
+  font-size:36px;
+  font-weight:bold;
+  color:white;
+  margin-bottom:15px;
+  padding:5px;
+  text-align:center;
+  background-color:rgb(19, 59, 34);
+}
+.question{
+  font-size:24px;
+  font-weight:bold;
+  width:50%;
+  background-color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 auto;
+  padding:5px;
+  margin-bottom:5px;
+  font-family:DFKai-sb;
+}
+.answer{
+  font-size:18px;
+  font-weight:bold;
+  width:50%;
+  background-color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 auto;
+  margin-bottom:15px;
+  padding:5px;
+  text-align:justify;
+  font-family:DFKai-sb;
+  text-indent:2em;
+}
+
+
+
+
+@media (max-width:1280px){
+  /*螢幕寬度小於1280，套用此區塊CSS*/
+  .question{
+      width:45%;
+  }
+  .answer{
+      width:45%;
+  }
+}
+
+@media (max-width:500px){
+  /*螢幕寬度小於500，套用此區塊CSS*/
+  .headline{
+      font-size:20px
+  }
+  .question{
+      width:80%;
+  }    
+  .answer{
+      width:80%;
+  }
+}

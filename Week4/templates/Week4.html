@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Week4.css">
+    <title>會員系統</title>
+</head>
+<body>
+    <div class="welcome" >歡迎光臨，請輸入帳號密碼</div>
+    <div class="signin">登入系統</div>
+    <form class="form" action="/signin" method="POST">
+        <div>帳號<input type="text" name="account" /></div>
+        <div>密碼<input type="password" name="password" /></div>
+        <div>同意條款<input type="checkbox" name="agreesign" /></div>
+        <div><button>登入</button></div>
+    </form>
+
+    <script>
+        let form=document.querySelector("form");
+        let agreesign=document.querySelector("input[name='agreesign']");
+        form.addEventListener("submit", function(event){
+            if (!agreesign.checked){
+                // event.preventDefault();
+                alert("Please check the checkbox first.");
+            }
+        });
+    </script>
+</body>
+</html>

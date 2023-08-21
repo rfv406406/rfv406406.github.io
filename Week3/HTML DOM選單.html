@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>JS DOM核心</title>
+</head>
+<body>
+    <div>
+        <span onclick="changeToAbout()">關於我</span>
+        <span onclick="changeToExps()">學經歷</span>
+    </div>
+    <hr/>
+    <div id="about">大家好，我是王大明</div>
+    <div id="exps" style="display:none">我畢業於園藝系</div>
+    <script>
+        function changeToAbout(){
+            //先取得要操作的標籤  
+            let aboutDiv=document.querySelector("#about");
+            let expsDiv=document.querySelector("#exps");
+            //再對標籤做操作
+            aboutDiv.style.display="block";
+            expsDiv.style.display="none";
+        }
+        function changeToExps(){
+            //先取得要操作的標籤
+            let aboutDiv=document.querySelector("#about");
+            let expsDiv=document.querySelector("#exps");
+            //再對標籤做操作
+            aboutDiv.style.display="none";
+            expsDiv.style.display="block";
+        }
+
+    </script>
+</body>

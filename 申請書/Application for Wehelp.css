@@ -1,0 +1,83 @@
+.banner{
+    background-image:url("banner.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    height:100%;
+    width:100%;
+    background-attachment:fixed;
+}
+.headline{
+    font-size:36px;
+    font-weight:bold;
+    color:white;
+    margin-bottom:15px;
+    padding:5px;
+    text-align:center;
+    background-color:rgb(19, 59, 34);
+}
+.question{
+    font-size:26px;
+    font-weight:bold;
+    width:50%;
+    height:auto;
+    background-color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto;
+    padding:5px;
+    margin-bottom:5px;
+    font-family:DFKai-sb;
+}
+.answer{
+    font-size:18px;
+    font-weight:bold;
+    width:50%;
+    height:auto;
+    background-color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto;
+    margin-bottom:15px;
+    padding:5px;
+    text-align:justify;
+    font-family:DFKai-sb;
+    text-indent: 2em;
+}
+
+
+  
+  
+
+
+@media (max-width:1280px){
+    /*螢幕寬度小於1280，套用此區塊CSS*/
+    .question{
+        width:45%;
+        height:auto;
+    }
+    .answer{
+        width:45%;
+        height:auto;
+    }
+}
+
+@media (max-width:500px){
+    /*螢幕寬度小於500，套用此區塊CSS*/
+    .banner{
+        height:auto;
+    }
+    .headline{
+        font-size:20px
+    }
+    .question{
+        width:80%;
+        height:auto;
+    }    
+    .answer{
+        width:80%;
+        height:auto;
+    }
+}

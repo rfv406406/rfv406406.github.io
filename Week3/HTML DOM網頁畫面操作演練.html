@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>JS DOM核心</title>
+</head>
+<style>
+    .text{text-decoration:underline;font-weight:bold} 
+</style>
+<body>
+    <h3>HTML DOM 畫面操作</h3>
+    <div id="content">練習網頁畫面的操作</div>
+
+    <bottom onclick="change();">點我</bottom>
+    <script>
+        function change(){
+            document.body.innerHTML="新的內容"; //改body內文
+        }
+    </script>
+
+    <bottom onclick="change2();">點我2</bottom>
+    <script>
+        function change2(){
+            //取得目標物件
+            let elem=document.querySelector("#content"); //#為區塊名
+            //操作標籤物件
+            elem.innerHTML="對特定標籤做操作"; //改標籤內文
+            elem.className="text" //增加class屬性
+            elem.style.fontSize="30px" //單一CCS屬性設定
+            elem.style.color="red"
+        }
+    </script>
+</body>

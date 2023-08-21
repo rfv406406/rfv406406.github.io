@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>AJAX</title>
+</head>
+<body>
+  
+
+    <script>
+const urls = 'https://www.travel.taipei/d_upload_ttn/sceneadmin/pic/11000340.jpghttps://www.travel.taipei/d_upload_ttn/sceneadmin/image/A0/B0/C0/D906/E6/F186/809f30db-7079-421f-a625-7baa8ec21874.JPGhttps://www.travel.taipei/d_upload_ttn/sceneadmin/pic/11000341.jpg';
+
+// 使用 split() 方法将字符串按照 "https" 进行分割
+const urlSegments = urls.split('https').filter(url => url.trim() !== '');
+
+// 添加 "https" 前缀到每个分段
+const finalUrls = urlSegments.map(segment => `https${segment}`);
+
+for(let i=0;i < finalUrls.length;i++){
+    console.log(finalUrls[i])
+}
+
+console.log(finalUrls);
+    </script>
+</body>

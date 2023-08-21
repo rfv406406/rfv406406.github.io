@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head> 
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript 物件基礎</title>
+</head>
+<body>
+    <script>
+        /*
+        //建立物件
+        let man=new Object(); //建立空白物件 new object()
+        man.age=18; //物件.成員名稱=資料
+        man.name="小王";
+        man.talk=function(){
+            console.log("Hello")
+        }
+        //使用物件
+        console.log(man);
+        console.log(man.age>20); //物件.成員名稱
+        man.talk(); //呼叫函式 (呼叫物件方法)
+        */
+    </script>
+
+    <script>
+        /*
+        //建立物件
+        let man=new Object(); //建立空白物件 new object()
+        man.age=18; //物件.成員名稱=資料
+        man.name="小王";
+        man.talk=function(){
+            //物件使用方法,使用this代表物件本身
+            console.log("Hello 我是", this.name, "年齡", this.age);
+        }
+        //使用物件
+        console.log(man);
+        console.log(man.age>20); //物件.成員名稱
+        man.talk(); //呼叫函式 (呼叫物件方法)
+        */
+    </script>
+
+    <script>
+        //使用JSON建立物件
+        //{成員名稱:資料,...}
+        let man={
+            age:18,
+            name:"小王",
+            talk:function(){
+                 console.log("Hello 我是", this.name, "年齡", this.age);}
+        };
+        //使用物件
+        console.log(man);
+        console.log(man.age>20)
+        man.talk()
+    </script>
+</body>

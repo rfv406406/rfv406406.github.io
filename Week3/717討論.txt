@@ -1,0 +1,29 @@
+Lulu Ding晚上10:25
+Python 中常用的風格是「snake_case」，而 JavaScript 中常用的風格是「camelCase」
+Hung-Chih Lee晚上10:25
+- Camel Case
+    - 第一個字母為小寫，之後每個字開頭為大寫，不包含空格
+    - JavaScript
+    - 範例: userName
+- Snake Case
+    - 單字皆為小寫，單字以底線 _ 分離
+    - Python 常用
+    - 範例: file_name
+Steward Tsou晚上10:27
+https://www.youtube.com/watch?v=ahgcD1xjRiQ&ab_channel=Sferoid
+Snake Jazz 可以搭配 snake case
+Steward Tsou晚上10:29
+https://ithelp.ithome.com.tw/m/articles/10260109
+一定要遵守的：
+
+允許 a-z A-z 0-9 和 _ , 但是 開頭不可為數字 (開頭也儘量不要是下底線，開頭為下底線大多都有特殊用途)
+比較特殊的
+特殊的變數, 開頭和結尾都加 兩個下底線 , ex: __init__
+特殊的 class — 使用 單下底線或雙下底線
+開頭單下底線 — 用在 private 的 method or variable
+結尾單下底線 — 用在避免和 python keyword 的衝突 ex: str_
+開頭雙下底線 — 會觸發 name mangling, 用在 class definition, 不常使用
+要注意的：
+
+變數區分大小寫
+變數長度沒有限制

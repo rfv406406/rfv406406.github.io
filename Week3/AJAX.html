@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>AJAX</title>
+</head>
+<body>
+    <h3>AJAX/HXR 網路連線實務</h3>
+    <buttom onclick="getData();">取得連線資料</buttom>
+    <div id="result"></div>
+    <script>
+      function getData(){
+        //利用FETCH進行連線取得資料
+        fetch("https://cwpeng.github.io/live-records-samples/data/products.json").then(function(response){
+            return response.json();
+        }).then(function(data){
+            //已經取得的資料，把資料呈現於畫面
+            let result=document.querySelector("#result");
+            result.innerHTML="";
+            for(let i=0;i<data.length;i++){
+                let product=data[i];
+                result.innerHTML+="<div>"+product.name+","+product.price+","+product.description+"<div>";
+            }
+        });
+      }
+    </script>
+</body>

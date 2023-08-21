@@ -1,0 +1,68 @@
+Lab 1
+if there’s only a singular fixed photo, it will be
+540x540px?
+600 x 90% 是手機
+
+@media 
+(-webkit-min-device-pixel-ratio: 1.25), 
+(min-resolution: 120dpi){ 
+    /* Retina-specific stuff here */
+}
+前端效能優化
+
+why between 360px ~ 1920px
+mainstream device sizes
+
+why max-width 1200px
+to avoid not seeing any necessary elements in rather smaller screens
+Make sure only extra, decorative elements such as background elements exists above 1200px width
+
+<p> <div> <span> 比較
+Tag	<p>	<div>	<span>
+行內區塊	block	block	inline
+語意(Semantics)	一段文字(paragraph)	一個區塊	一行文字
+使用時機	一區文字	獨立區塊	連續文字
+內建(inbuilt)	margin: 1rem 0; 上下為一字，中間預設16px+6.5px	佔一整行	長寬為 auto(1rem) auto
+vw, vh and %
+其差異類似 rem 與 em， r= root 通常也在 body 設定
+
+1vh/1vw 視窗 (viewport)高/寬度的 1%
+v= visual
+
+1% 外元素，基準值由屬性(attr)的特性決定，是指親元素的 1%
+100vh vs 100%
+
+<body style="height: 100%">
+    <div style="height: 200px">
+        <p style="height: 100%; display: block;">Hello, world!</p>
+    </div>
+</body>
+p = 100% height 是指親元素的 100%。使用 100vh 則是 body
+
+vw/vh/% playground
+ref
+ref2
+ref3
+
+margin collapse 現象
+發生在 div, p 這類區塊元素的「垂直」排版
+只會發生在預設的排版 (Flow Layout)，Flex, Grid, Positioned Layout 不會發生
+(X) 任何不可視元素<br/>無法阻止其發生
+(O) 相對的，可以用 <hr>阻止其發生
+Margin collapse can stack(累積) and create a domino effect(連鎖效應) of siblings effecting each other
+預防方式
+盡量不要在親子元素之間用 margin，而是用 padding
+親子元素亦可設定 border
+多用其他排版方式的 gap, 如 Flex/Grid
+use UI framework
+…
+Example
+Document
+1
+2
+3 中文
+
+display:none 和 visibility:hidden
+以排隊來比喻
+display: none 會讓空間整個消失，回來的時候自備椅子，連人帶椅子
+visiblity: hidden 是排隊解壓縮，椅子跟包包都在，人（目前）不在空間還在，吃拉麵會被轟出去。

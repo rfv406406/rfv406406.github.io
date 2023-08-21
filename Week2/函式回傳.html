@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width", innitial-scale="1.0" />
+        <meta charset="utf-8" />
+        <title>函式回傳值</title> 
+    </head>
+    <body>
+        <script>
+            //return用來結束函式
+
+            /*
+            function test(){
+                console.log("Hello");
+                return;
+            }
+            let value=test()
+            console.log(value)  //Hello,Undefinded
+            */
+
+
+            /*function divide(n1,n2) {
+                let result=n1/n2;
+                console.log(result);
+                return result;
+            }
+            let ans=divide(4,2)
+            console.log(ans);
+            */
+           
+            function divide(n1,n2) {
+                let result=n1/n2;
+                return result;
+            }
+            let ans=divide(4,2)
+            console.log(ans); //2
+
+            /*function divide(n1,n2) {
+                let result=n1/n2;
+                return result;
+            }
+            divide(4,2)
+            console.log(divide(4,2)); //2 */
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+WeHelp晚上9:05
+感謝分享，下次要來使用第十版了 ~
+WeHelp晚上9:09
+CPU + (Device Controller <-> Devices)
+       ----- shared bus ------
+Memory Controller <-> Memory
+WeHelp晚上9:12
+未來談 CPU 特別指的是 General Purpose Processor，不是指其他特殊公用的處理單元。
+WeHelp晚上9:15
+Multiple CPUs
+Multi-Core CPU 多核心系統，內部核心的互動是 in-chip 比較快速，比較節能，有共用的資源，例如 L2 Cache。
+WeHelp晚上9:17
+Multiple CPUs 或可簡單的認知為多台伺服器一起工作，建立一個系統的概念。
+WeHelp晚上9:18
+如何達成 Graceful Degradation：
+
+HP 的某系統設計範例兩倍的 CPU，每一件事情都有兩個人處理，可以檢測是否正確，也可以互相替代，讚讚讚，但就是消耗資源。
+HP 的某系統設計範例：使用兩倍的 CPU，每一件事情都有兩個人處理，可以檢測是否正確，也可以互相替代，讚讚讚，但就是消耗資源。
+WeHelp晚上9:21
+Symmetric Multiprocessing 為目前常見的系統設計，很泛用。
+
+Asymmetric Multiprocessing 可以由主 CPU 根據工作特性，指派給特別適合處理該工作的 CPU 處理，少見，但仍然存在。
+WeHelp晚上9:26
+Clustered Systems 可以參考 DB Cluster 的一些觀念，會相當通用。

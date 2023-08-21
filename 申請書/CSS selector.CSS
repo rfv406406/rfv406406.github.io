@@ -1,0 +1,8 @@
+/* 標籤選擇器 */
+            body{background-color:#CCCCCC}
+            /*id選擇器*/
+            #title-1{text-decoration:line-through}
+            /*class 選擇器*/
+            .title{margin-bottom:10px;font-weight:bold;font-size:24px;color:blue}
+            .content{width:400px;padding:10px;border:1px dashed blue;color:#666666}
+            .keyword{color:red}

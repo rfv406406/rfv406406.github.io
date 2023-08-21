@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>AJAX</title>
+</head>
+<body>
+    <div class="frame3">
+        <div class="frame3-1"></div>
+        <div class="frame3-1"></div>
+        <div class="frame3-1"></div>
+    </div>
+
+    <script>
+        function getData(){
+            
+            fetch("https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                
+                let box = document.querySelectorAll(".frame3-1");
+    
+                for(let i = 0; i < box.length; i++){
+                    let container = box[i];
+                    
+                    let file = data.result.results[i].file;
+    
+                   
+                    let newDiv = document.createElement('div');
+    
+                    
+                    newDiv.textContent = file;
+    
+                    
+                    container.appendChild(newDiv);
+                }
+            });
+        }
+    
+        
+        getData();
+    </script>
+
+</body>

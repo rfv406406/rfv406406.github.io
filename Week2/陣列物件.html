@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head> 
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript 物件基礎</title>
+</head>
+<body>
+    <script>
+        /*//建立陣列物件
+        let grades=[70,50,84];
+        grades.push(100);
+        grades.push(20);
+        console.log(grades);
+        console.log(grades[0])
+        console.log(grades[1])
+        console.log(grades[2])
+        console.log(grades[3])
+        console.log(grades[4])
+        console.log(grades.length)
+        */
+    </script>
+    <script>
+        /*
+        //建立陣列物件
+        let grades=[70,50,84];
+        grades.push(100);
+        grades.push(20);
+        console.log(grades);
+        //利用for迴圈,逐一取得陣列資料
+        for (let i=0;i<grades.length;i++){
+            console.log(grades[i]);
+        }
+        */
+    </script>
+    <script>
+        //建立陣列物件
+        let grades=[70,50,84];
+        grades.push(100);
+        grades.push(20);
+        console.log(grades);
+        //利用for迴圈,逐一取得陣列資料
+        //算平均數,總和
+        let total=0; //用來記錄累加結果
+        for (let i=0;i<grades.length;i++){
+            total=total+grades[i]
+        }
+        let avg=total/grades.length;
+        console.log(avg);
+        console.log(total);
+    </script>
+</body>

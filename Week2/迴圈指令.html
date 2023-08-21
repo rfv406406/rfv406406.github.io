@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head> 
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Javascript 流程控制:迴圈</title>
+</head>
+<body>
+    <script>
+        /*
+        //break指令
+        let n=0
+        while(n<5){
+            if(n==3){
+                break //強迫迴圈結束
+            }
+        console.log(n);
+        n++;
+        }
+        */
+
+        for(let n=0;n<5;n++){
+            if(n==3){
+                continue; //迴圈進入下一圈，注意位置，以免島只下方指令被忽略
+            }
+            console.log(n)
+        }
+    </script>
+</body>
